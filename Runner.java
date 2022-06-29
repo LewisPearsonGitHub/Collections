@@ -17,9 +17,13 @@ public class Runner {
 		Iterator<Employee> itr = null;
 		itr=list.listIterator();
 		
+		System.out.println("Using a LinkedList\n--------------------");
+		
 		while (itr.hasNext()) {
 			System.out.println(itr.next());
 		}
+		
+		System.out.println("\nUsing Hashsets\n--------------------");
 		
 		Set<Employee> hashSet = new HashSet<>();
 		hashSet.add(new Employee(1, "Employee1"));
@@ -29,11 +33,13 @@ public class Runner {
 		System.out.println(hashSet);
 		System.out.println(hashSet.size());
 		
+		System.out.println("\nUsing Hashmaps\n--------------------");
+		
 		Map<Integer, Employee> employees = new HashMap<>();
-		employees.put(1, new Employee("Paul"));
-		employees.put(2, new Employee("George"));
-		employees.put(3, new Employee("John"));
-		employees.put(4, new Employee("Ringo"));
+		employees.put(1, new Employee(1, "Paul"));
+		employees.put(2, new Employee(2, "George"));
+		employees.put(3, new Employee(3, "John"));
+		employees.put(4, new Employee(4, "Ringo"));
 		
 		System.out.println(employees);
 	}
